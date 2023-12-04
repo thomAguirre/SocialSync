@@ -3,87 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Your Social Media</title>
-    <!-- Add your CSS stylesheets here -->
-    <!-- Example: <link rel="stylesheet" href="styles.css"> -->
+    <title>SocialSync- Social Media</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            background-color: #f2f2f2;
         }
-
-        .login-container {
-            background-color: #fff;
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        .login-container h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .login-form {
-            display: flex;
-            flex-direction: column;
-        }
-
+        
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
-
+        
         .form-group label {
-            font-size: 14px;
+            display: block;
+            font-weight: bold;
             margin-bottom: 5px;
-            color: #555;
         }
-
+        
         .form-group input {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+            border-radius: 3px;
         }
-
-        .login-btn {
+        
+        .form-group button {
+           width: 100%;
+            padding: 10px;
             background-color: #4CAF50;
             color: #fff;
             border: none;
-            padding: 10px;
-            border-radius: 4px;
+            border-radius: 3px;
             cursor: pointer;
-        }
-
-        .login-btn:hover {
-            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-
-<div class="login-container">
-    <h2>Login to Your Social Media</h2>
-    <form class="login-form" action="/login" method="post">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit" class="login-btn">Login</button>
-    </form>
-</div>
-
+    <div class="container">
+        <h1>SocialSync</h1>
+        <h2>Login</h2>
+         <form action="login.php" method="post">
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign In</button>
+            </div>
+        </form>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+        <p>Forgot your username or password? <a href="#">Recover Account</a></p>
+    </div>
 </body>
 </html>
