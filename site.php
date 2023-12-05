@@ -74,6 +74,16 @@
 </head>
 <body>
 
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    // Redirect to the login page if not logged in
+    header("Location: /login.html");
+    exit();
+}
+?>
+
 <div class="navbar">
     <h1>Your Social Media</h1>
 
