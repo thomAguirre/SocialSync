@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS `Comment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Comment` (
-  `CommentID` int NOT NULL,
+  `CommentID` int NOT NULL AUTO_INCREMENT,
   `PostID` int DEFAULT NULL,
   `UserID` int DEFAULT NULL,
   `Content` varchar(255) DEFAULT NULL,
@@ -61,7 +61,7 @@ DROP TABLE IF EXISTS `Post`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Post` (
-  `PostID` int NOT NULL,
+  `PostID` int NOT NULL AUTO_INCREMENT,
   `UserID` int DEFAULT NULL,
   `Content` varchar(255) DEFAULT NULL,
   `PostDate` date DEFAULT NULL,
@@ -89,7 +89,7 @@ DROP TABLE IF EXISTS `User`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `User` (
-  `UserID` int NOT NULL,
+  `UserID` int NOT NULL AUTO_INCREMENT,
   `Username` varchar(255) DEFAULT NULL,
   `Email` varchar(255) DEFAULT NULL,
   `Password` varchar(255) DEFAULT NULL,
@@ -123,4 +123,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-04 14:00:14
+-- Dump completed on 2023-12-05 12:34:54
