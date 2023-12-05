@@ -11,7 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         // Login successful
+
+        //Set session variables
+        $userdata = $result->fetch_assoc()
+
         $_SESSION['username'] = $username;
+        $_SESSION['userID'] = $userdata["UserID"]
+        $_SESSION['pfp'] = $userdata["PFP"]
+        
         header("Location: /site.php"); // Redirect to the main site
     } else {
         // Login failed
