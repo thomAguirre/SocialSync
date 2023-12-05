@@ -13,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Login successful
 
         //Set session variables
-        $userdata = $result->fetch_assoc()
+        $userdata = $result->fetch_assoc();
 
         $_SESSION['username'] = $username;
-        $_SESSION['userID'] = $userdata["UserID"]
-        $_SESSION['pfp'] = $userdata["PFP"]
-        
+        $_SESSION['userID'] = $userdata["UserID"];
+        $_SESSION['pfp'] = $userdata["PFP"];
+
         header("Location: /site.php"); // Redirect to the main site
     } else {
         // Login failed
