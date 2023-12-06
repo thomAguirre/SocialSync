@@ -16,7 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate the post content 
     if (empty($postContent)) {
         echo "Post content cannot be empty.";
-        // You might want to redirect the user back to the form or handle the error appropriately
+
+        //redirect script
+        echo "<p>You will be redirected in 3 seconds</p>";
+        echo "<script>";
+        echo "var timer = setTimeout(function() { window.location='http://socialsync.com/site.php' }, 3000);";
+        echo "</script>";
     } else {
         // Insert the post into the database
         $insertQuery = "INSERT INTO socialsync.Post (UserID, Content, PostDate, Likes) 
@@ -27,15 +32,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($result) {
             echo "Post successfully created!";
-            // You might want to redirect the user to a success page or display a success message
+            
+            //redirect back to the site
+            header("Location: /site.php");
+            exit();
         } else {
             echo "Error creating post: " . $conn->error;
-            // You might want to redirect the user back to the form or handle the error appropriately
+
+            //redirect script
+            echo "<p>You will be redirected in 3 seconds</p>";
+            echo "<script>";
+            echo "var timer = setTimeout(function() { window.location='http://socialsync.com/site.php' }, 3000);";
+            echo "</script>";
         }
     }
 } else {
-    // If the form is not submitted, you can handle it accordingly
-    // For example, redirect the user back to the form
     header("Location: /site.php");
     exit();
 }
