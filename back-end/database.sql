@@ -35,7 +35,7 @@ CREATE TABLE `Comment` (
   `PostID` int DEFAULT NULL,
   `UserID` int DEFAULT NULL,
   `Content` varchar(255) DEFAULT NULL,
-  `CommentDate` date DEFAULT NULL,
+  `CommentDate` datetime DEFAULT NULL,
   PRIMARY KEY (`CommentID`),
   KEY `PostID` (`PostID`),
   KEY `UserID` (`UserID`),
@@ -64,7 +64,7 @@ CREATE TABLE `Post` (
   `PostID` int NOT NULL AUTO_INCREMENT,
   `UserID` int DEFAULT NULL,
   `Content` varchar(255) DEFAULT NULL,
-  `PostDate` date DEFAULT NULL,
+  `PostDate` datetime DEFAULT NULL,
   `Likes` int DEFAULT NULL,
   PRIMARY KEY (`PostID`),
   KEY `UserID` (`UserID`),
@@ -72,15 +72,6 @@ CREATE TABLE `Post` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `Post`
---
-
-LOCK TABLES `Post` WRITE;
-/*!40000 ALTER TABLE `Post` DISABLE KEYS */;
-INSERT INTO `Post` VALUES (1,1,'post','2023-12-05',0),(2,1,'post 2','2023-12-05',0);
-/*!40000 ALTER TABLE `Post` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `User`

@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Insert the post into the database
         $insertQuery = "INSERT INTO socialsync.Post (UserID, Content, PostDate, Likes) 
-                        VALUES ('$userID', '$postContent', CURDATE(), 0)";
+                        VALUES ('$userID', '$postContent', NOW(), 0)";
 
         // Execute the query
         $result = $conn->query($insertQuery);
