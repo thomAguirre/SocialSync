@@ -93,16 +93,16 @@ if (!isset($_SESSION['username'])) {
 </div>
 
 <div class="post-container">
-    <div class="post-form">
-        <textarea placeholder="What's on your mind?" rows="4" cols="50"></textarea>
-        <button class="post-btn">Post</button>
-    </div>
+    <form action="/back-end/create-post.php" method="post">
+        <textarea name="post_content" placeholder="What's on your mind?"></textarea>
+        <input type="submit" value="Post">
+    </form>
+</div>
 
+<div class="post-container">
     <div class="post">
         <p>This is a sample post. Your text goes here.</p>
     </div>
-
-    <!-- Add more posts dynamically based on your backend data -->
 </div>
 
 </body>
