@@ -99,11 +99,8 @@ if (!isset($_SESSION['username'])) {
     </form>
 </div>
 
-<div class="post-container">
-    <div class="post">
-        <p>This is a sample post. Your text goes here.</p>
-    </div>
-</div>
+<!-- Get posts -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/back-end/get-posts.php'); ?>
 
 </body>
 </html>
