@@ -17,16 +17,22 @@
             </div>
             <div class="rhs_wrap">
                 <div>
-                <!-- <form> -->
+                 <form action="./back-end/login.php" method="post">
+             <div class="form-group">
                     <div class="input-container">
                       <i class="fa fa-user icon"></i>
-                      <input class="input-field" type="text" placeholder="Username" name="usrnm">
+                      <input class="input-field" type="text" placeholder="Username" name="usrnm"  required>
+                       <div class="form-group">
+                          <div class="form-group">
                     </div>
                     <div class="input-container">
                       <i class="fa fa-key icon"></i>
-                      <input class="input-field" type="password" placeholder="Password" name="psw">
+                      <input class="input-field" type="password" placeholder="Password" name="psw"  required>
+                       
+                          
                     </div>
                     <a href="./chat.html"><button type="submit" class="btn">Sign In</button></a>
+                     
                     <div class="anch_wrap">
                         <a href="#">Forgot Password</a>
                         <a href="#">Create Account</a>
