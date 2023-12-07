@@ -2,13 +2,119 @@
 <html lang="en">
 
 <head>
-    <title>LOGIN</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>SocialSync- Social Media</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .main_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login_wrap {
+            display: flex;
+            max-width: 500px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .lhs_wrap {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .lhs_wrap img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rhs_wrap {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .input-field {
+            width: calc(100% - 20px);
+            padding: 10px 40px 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .anch_wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
+
 <body>
     <div class="main_wrapper">
         <div class="login_wrap">
@@ -17,16 +123,19 @@
             </div>
             <div class="rhs_wrap">
                 <div>
-                <!-- <form> -->
-                    <div class="input-container">
-                      <i class="fa fa-user icon"></i>
-                      <input class="input-field" type="text" placeholder="Username" name="usrnm">
-                    </div>
-                    <div class="input-container">
-                      <i class="fa fa-key icon"></i>
-                      <input class="input-field" type="password" placeholder="Password" name="psw">
-                    </div>
-                    <a href="./chat.html"><button type="submit" class="btn">Sign In</button></a>
+                    <form action="./back-end/login.php" method="post">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn">Sign In</button>
+                        </div>
+                    </form>
                     <div class="anch_wrap">
                         <a href="#">Forgot Password</a>
                         <a href="#">Create Account</a>
@@ -35,7 +144,6 @@
             </div>
         </div>
     </div>
-    
 </body>
 
 </html>
