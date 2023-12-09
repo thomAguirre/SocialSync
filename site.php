@@ -88,7 +88,7 @@ if (!isset($_SESSION['username'])) {
     <h1>Your Social Media</h1>
 
     <div class="profile-icon">
-        <a href="profile.html">Profile</a>
+        <a href="profile.php">Profile</a>
     </div>
 </div>
 

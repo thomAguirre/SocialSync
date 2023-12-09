@@ -2,19 +2,37 @@
 // Include the database connection file
 include($_SERVER['DOCUMENT_ROOT'].'/back-end/db.php');
 
-// Select all posts from the database and get the user's name
-$selectQuery = "SELECT
-                    P.Content, 
-                    P.PostDate, 
-                    P.Likes, 
-                    U.FirstName, 
-                    U.LastName 
-                FROM 
-                    socialsync.Post P
-                JOIN 
-                    socialsync.User U ON P.UserID = U.UserID 
-                ORDER BY 
-                    P.PostDate DESC";
+//Check if specific user is desired. Else, fetch all posts
+if(isset($calluser)) {
+    $selectQuery = "SELECT
+                        P.Content, 
+                        P.PostDate, 
+                        P.Likes, 
+                        U.FirstName, 
+                        U.LastName 
+                    FROM 
+                        socialsync.Post P
+                    JOIN 
+                        socialsync.User U ON P.UserID = U.UserID
+                    WHERE P.UserID = $calluser
+                    ORDER BY 
+                        P.PostDate DESC";
+    unset($calluser);
+}
+else {
+    $selectQuery = "SELECT
+                        P.Content, 
+                        P.PostDate, 
+                        P.Likes, 
+                        U.FirstName, 
+                        U.LastName 
+                    FROM 
+                        socialsync.Post P
+                    JOIN 
+                        socialsync.User U ON P.UserID = U.UserID 
+                    ORDER BY 
+                        P.PostDate DESC";
+}
 
 $result = $conn->query($selectQuery);
 

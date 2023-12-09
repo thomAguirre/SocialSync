@@ -75,22 +75,18 @@
 </div>
 
 <div class="profile-container">
-    <div class="user-info">
-        <img src="path/to/profile-picture.jpg" alt="Profile Picture" class="profile-img">
-        <h2>Username</h2>
-        <p>Email: user@example.com</p>
-        <p>Location: City, Country</p>
-    </div>
+    <!-- Get user info -->
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/back-end/get-user-info.php'); ?>
 
+    <!-- Logout button -->
     <a href="/back-end/logout.php">Logout</a>
 
     <h2>User's Posts</h2>
+    <?php
+        $calluser = $_SESSION['userID'];
+        include($_SERVER['DOCUMENT_ROOT'].'/back-end/get-posts.php'); 
+    ?>
 
-    <div class="post">
-        <p>This is a sample post. Your text goes here.</p>
-    </div>
-
-    <!-- Add more posts dynamically based on your backend data -->
 </div>
 
 </body>
