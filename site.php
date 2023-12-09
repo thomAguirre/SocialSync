@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Social Media Feed</title>
+    <title>SocialSync | Feed</title>
     <!-- Add your CSS stylesheets here -->
     <!-- Example: <link rel="stylesheet" href="styles.css"> -->
     <style>
