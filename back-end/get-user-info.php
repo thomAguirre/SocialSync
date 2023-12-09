@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
   //Display User info
   while ($row = $result->fetch_assoc()) {
     echo '<div class="user-info">';
-      echo '<img src="' . $row['PFP'] . '" alt="Profile Picture" class="profile-img">';
+      echo '<img src="./assets/user/' . $row['PFP'] . '" alt="Profile Picture" class="profile-img">';
       echo "<h2>" . $row['Username'] . "</h2>";
       echo "<p>" . $row['Email'] . "</p>";
       echo "<p>" . $row['Location'] . "</p>";
