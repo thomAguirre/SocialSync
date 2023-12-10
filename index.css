@@ -63,7 +63,7 @@ body{
 }
 .lhs_wrap img{
     max-height: 220px;
-    opacity: .3;
+    opacity: 1;
 }
 .anch_wrap a{
     color: #999;
