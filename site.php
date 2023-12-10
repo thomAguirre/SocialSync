@@ -5,72 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SocialSync | Feed</title>
     <!-- Add your CSS stylesheets here -->
-    <!-- Example: <link rel="stylesheet" href="styles.css"> -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #333;
-            padding: 10px;
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .post-container {
-            margin: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .post-form {
-            margin-bottom: 20px;
-        }
-
-        .post-form textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            resize: none;
-        }
-
-        .post-btn {
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .post-btn:hover {
-            background-color: #45a049;
-        }
-
-        .post {
-            margin-bottom: 20px;
-        }
-
-        .post p {
-            margin: 0;
-        }
-
-        .profile-icon {
-            color: #fff;
-            margin-left: auto; /* Push the profile icon to the far right */
-        }
-    </style>
+    <link rel="stylesheet" href="./site.css">
 </head>
 <body>
 
@@ -85,7 +20,8 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <div class="navbar">
-    <h1>Your Social Media</h1>
+    <img src="./assets/SocialSync-Icon.png" class="logo">
+    <img src="./assets/SocialSync-Text.png" class="logo">
 
     <div class="profile-icon">
         <a href="profile.php">Profile</a>
