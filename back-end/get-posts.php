@@ -42,8 +42,8 @@ if ($result->num_rows > 0) {
 
     echo '<div class="post-container">';
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="post">';
         echo "<p>" . $row['FirstName'] . " " . $row['LastName'];
+        echo '<div class="post">';
         echo "<p>" . $row['Content'] . "</p>";
         echo "<p>" . $row['PostDate'] . "</p>";
         echo "<p>Likes: " . $row['Likes'] . "</p>";
