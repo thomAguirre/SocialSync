@@ -9,7 +9,8 @@ if(isset($calluser)) {
                         P.PostDate, 
                         P.Likes, 
                         U.FirstName, 
-                        U.LastName 
+                        U.LastName, 
+                        U.PFP
                     FROM 
                         socialsync.Post P
                     JOIN 
@@ -25,7 +26,8 @@ else {
                         P.PostDate, 
                         P.Likes, 
                         U.FirstName, 
-                        U.LastName 
+                        U.LastName,
+                        U.PFP 
                     FROM 
                         socialsync.Post P
                     JOIN 
@@ -42,11 +44,30 @@ if ($result->num_rows > 0) {
 
     echo '<div class="post-container">';
     while ($row = $result->fetch_assoc()) {
-        echo "<p>" . $row['FirstName'] . " " . $row['LastName'];
+        //post container
         echo '<div class="post">';
-        echo "<p>" . $row['Content'] . "</p>";
+
+        //post heading
+        echo '<div class="post-heading">';
+        //profile picture
+        echo '<img src="./assets/user/' . $row['PFP'] . '" alt="Profile Picture" class="posters-pfp">';
+        //user's name
+        echo "<p>" . $row['FirstName'] . " " . $row['LastName'];
+        //datetime
+        echo '<div class="post-date">';
         echo "<p>" . $row['PostDate'] . "</p>";
+        echo "</div>";
+        echo "</div>";
+
+        //content
+        echo '<div class="post-content">';
+        echo "<p>" . $row['Content'] . "</p>";
+        echo "</div>";
+
+        //footer/likes
+        echo '<div class="post-footer">';
         echo "<p>Likes: " . $row['Likes'] . "</p>";
+        echo "</div>";
         echo "</div>";
     }
     echo "</div>";

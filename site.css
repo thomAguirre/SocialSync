@@ -38,7 +38,7 @@ body {
 }
 
 .post-btn {
-    background-color: #4CAF50;
+    background-color: #ffffff;
     color: #fff;
     border: none;
     padding: 10px;
@@ -51,10 +51,42 @@ body {
 }
 
 .post {
-    background-color: #1eada2;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.post-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.post-date {
+    color: gray;
+    font-style: italic;
+    margin-left: auto;
+}
+
+.posters-pfp {
+    width: 3%;
+}
+
+.post-content {
+    background-color: #1eada2;
+    padding: 20px;
+    border-radius: 0px 20px 20px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: x-large;
+}
+
+.post-footer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    font-size: small;
 }
 
 .post p {

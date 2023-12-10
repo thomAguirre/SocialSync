@@ -30,10 +30,14 @@ if (!isset($_SESSION['username'])) {
 
 <div class="post-container">
     <div class="post">
-        <form action="/back-end/create-post.php" method="post">
-            <textarea name="post_content" placeholder="What's on your mind?"></textarea>
-            <input type="submit" value="Post">
-        </form>
+        <div class="post-content">
+            <div class="post-form">
+                <form action="/back-end/create-post.php" method="post">
+                    <textarea name="post_content" placeholder="What's on your mind?"></textarea>
+                    <input type="submit" value="Post" class="post-btn">
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
