@@ -23,9 +23,11 @@ if (!isset($_SESSION['username'])) {
     <img src="./assets/SocialSync-Icon.png" class="logo">
     <img src="./assets/SocialSync-Text.png" class="logo">
 
-    <div class="profile-icon">
-        <a href="profile.php">Profile</a>
-    </div>
+    <a href="profile.php" class="nav-profile">
+        <?php
+            echo '<img src="./assets/user/' . $_SESSION['pfp'] . '" alt="Profile Picture" class="profile-image large">';
+        ?>
+    </a>
 </div>
 
 <div class="post-container">

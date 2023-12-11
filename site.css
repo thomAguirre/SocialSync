@@ -18,6 +18,10 @@ body {
     height: 10%;
 }
 
+.nav-profile {
+    margin-left: auto;
+}
+
 .post-container {
     margin: 20px;
     padding: 20px;
