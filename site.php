@@ -20,9 +20,10 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <div class="navbar">
-    <img src="./assets/SocialSync-Icon.png" class="logo">
-    <img src="./assets/SocialSync-Text.png" class="logo">
-
+    <a href="site.php" class="logo">
+        <img src="./assets/SocialSync-Icon.png" class="logo">
+        <img src="./assets/SocialSync-Text.png" class="logo">
+    </a>
     <a href="profile.php" class="nav-profile">
         <?php
             echo '<img src="./assets/user/' . $_SESSION['pfp'] . '" alt="Profile Picture" class="profile-image large">';

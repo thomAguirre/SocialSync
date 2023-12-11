@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    padding: 10px;
+    padding: 3%;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -18,8 +18,25 @@ body {
     height: 10%;
 }
 
+.logo {
+    height: 100%;
+}
+
 .nav-profile {
     margin-left: auto;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block; /* Ensure images inside anchor elements also behave like block-level elements */
+}
+
+.nav-profile {
+    margin-left: auto; /* Push the profile link to the far right */
 }
 
 .post-container {
@@ -96,10 +113,6 @@ body {
 .profile-icon {
     color: #fff;
     margin-left: auto; /* Push the profile icon to the far right */
-}
-
-.logo {
-    max-height: 100%;
 }
 
 .profile-container {
