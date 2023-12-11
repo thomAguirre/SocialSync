@@ -52,23 +52,23 @@ body {
 .post-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background-color: #1eada2;
+    border: none;
     box-sizing: border-box;
     resize: none;
 }
 
 .post-btn {
-    background-color: #ffffff;
-    color: #fff;
-    border: none;
+    margin-top: 10px;
+    background-color: #1eada2;
+    border-color: #1eada2;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .post-btn:hover {
-    background-color: #45a049;
+    background-color: #83dbd9;
 }
 
 .post {
@@ -94,6 +94,7 @@ body {
 .post-content {
     background-color: #1eada2;
     padding: 20px;
+    margin-left: 50px;
     border-radius: 0px 20px 20px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: x-large;
@@ -102,7 +103,7 @@ body {
 .post-footer {
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
+    margin-left: 70px;
     font-size: small;
 }
 
