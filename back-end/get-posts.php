@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
         //post heading
         echo '<div class="post-heading">';
         //profile picture
-        echo '<img src="./assets/user/' . $row['PFP'] . '" alt="Profile Picture" class="posters-pfp">';
+        echo '<img src="./assets/user/' . $row['PFP'] . '" alt="Profile Picture" class="profile-image small">';
         //user's name
         echo "<p>" . $row['FirstName'] . " " . $row['LastName'];
         //datetime

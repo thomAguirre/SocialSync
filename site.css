@@ -70,10 +70,6 @@ body {
     margin-left: auto;
 }
 
-.posters-pfp {
-    width: 3%;
-}
-
 .post-content {
     background-color: #1eada2;
     padding: 20px;
@@ -110,10 +106,26 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-img {
-    max-width: 150px;
+.profile-image {
+    overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 10px;
+    border: 2px solid #fff;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profile-image.small {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-image.large {
+    width: 100px;
+    height: 100px;
 }
 
 .user-info {
