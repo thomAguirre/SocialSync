@@ -20,19 +20,28 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <div class="navbar">
-    <img src="./assets/SocialSync-Icon.png" class="logo">
-    <img src="./assets/SocialSync-Text.png" class="logo">
-
-    <div class="profile-icon">
-        <a href="profile.php">Profile</a>
-    </div>
+    <a href="site.php" class="logo">
+        <img src="./assets/SocialSync-Icon.png" class="logo">
+        <img src="./assets/SocialSync-Text.png" class="logo">
+    </a>
+    <a href="profile.php" class="nav-profile">
+        <?php
+            echo '<img src="./assets/user/' . $_SESSION['pfp'] . '" alt="Profile Picture" class="profile-image large">';
+        ?>
+    </a>
 </div>
 
 <div class="post-container">
-    <form action="/back-end/create-post.php" method="post">
-        <textarea name="post_content" placeholder="What's on your mind?"></textarea>
-        <input type="submit" value="Post">
-    </form>
+    <div class="post">
+        <form action="/back-end/create-post.php" method="post" class="post-form">
+            <div class="post-content" style="border-radius: 20px 20px 20px 20px;">
+                <textarea name="post_content" placeholder="What's on your mind?"></textarea>
+            </div>
+            <div class="post-footer">
+                <input type="submit" value="Make Post" class="post-btn">
+            </div>
+        </form>
+    </div>
 </div>
 
 <!-- Get posts -->

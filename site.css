@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    padding: 10px;
+    padding: 3%;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -18,12 +18,31 @@ body {
     height: 10%;
 }
 
+.logo {
+    height: 100%;
+}
+
+.nav-profile {
+    margin-left: auto;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block; /* Ensure images inside anchor elements also behave like block-level elements */
+}
+
+.nav-profile {
+    margin-left: auto; /* Push the profile link to the far right */
+}
+
 .post-container {
     margin: 20px;
-    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .post-form {
@@ -33,27 +52,59 @@ body {
 .post-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background-color: #1eada2;
+    border: none;
     box-sizing: border-box;
     resize: none;
 }
 
 .post-btn {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
+    margin-top: 10px;
+    background-color: #1eada2;
+    border-color: #1eada2;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .post-btn:hover {
-    background-color: #45a049;
+    background-color: #83dbd9;
 }
 
 .post {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.post-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.post-date {
+    color: gray;
+    font-style: italic;
+    margin-left: auto;
+}
+
+.post-content {
+    background-color: #1eada2;
+    padding: 20px;
+    margin-left: 50px;
+    border-radius: 0px 20px 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: x-large;
+}
+
+.post-footer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    font-size: small;
 }
 
 .post p {
@@ -65,6 +116,41 @@ body {
     margin-left: auto; /* Push the profile icon to the far right */
 }
 
-.logo {
-    max-height: 100%;
+.profile-container {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profile-image.small {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-image.large {
+    width: 100px;
+    height: 100px;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-info h2 {
+    color: #333;
 }

@@ -69,7 +69,7 @@ CREATE TABLE `Post` (
   PRIMARY KEY (`PostID`),
   KEY `UserID` (`UserID`),
   CONSTRAINT `Post_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `User` (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -78,7 +78,7 @@ CREATE TABLE `Post` (
 
 LOCK TABLES `Post` WRITE;
 /*!40000 ALTER TABLE `Post` DISABLE KEYS */;
-INSERT INTO `Post` VALUES (3,1,'test','2023-12-06 13:14:50',0),(4,1,'This is a post','2023-12-06 14:22:30',0),(5,1,'post','2023-12-06 15:21:37',0),(6,1,'test','2023-12-06 15:21:44',0),(7,1,'post stuff','2023-12-07 17:23:07',0),(8,2,'My first post! Hello Everyone!','2023-12-09 14:08:21',0),(9,2,'Crazy winds today!','2023-12-09 14:13:15',0),(10,2,'Dogs are cool','2023-12-09 16:01:59',0);
+INSERT INTO `Post` VALUES (12,2,'This is a test of typing a somewhat long post. I am just typing random stuff to see how the wrapping works when making posts. I am not sure how it will work, and I really hope it does not break everything. Right now I think the limit is 255 characters.','2023-12-10 15:32:17',0),(13,2,'making sure this works still','2023-12-10 17:17:43',0),(14,3,'Good evening, citizens!','2023-12-11 17:39:12',0),(15,4,'Im Batman','2023-12-11 17:40:31',0),(16,4,'Disregard my earlier post I didnt realize that was public','2023-12-11 17:42:08',0),(17,5,'Ran to Star City for my favorite pizza place, but by the time I ran back home, pizza was cold. I swear...','2023-12-11 17:46:39',0),(18,2,'Why are there so many superheroes on here?','2023-12-11 17:54:54',0);
 /*!40000 ALTER TABLE `Post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +102,7 @@ CREATE TABLE `User` (
   `Bio` text,
   `Registered` date DEFAULT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -111,7 +111,7 @@ CREATE TABLE `User` (
 
 LOCK TABLES `User` WRITE;
 /*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES (1,'user','test@test.com','pass','fname','lname','2000-01-01','Default.png','place','Sample Bio','2023-12-04'),(2,'tagu','tagu@gmail.com','pass','Thomas','Aguirre','2000-09-11','Default.png','Claremont, CA','Hey everyone, Im Thomas!','2023-12-09');
+INSERT INTO `User` VALUES (1,'user','test@test.com','pass','fname','lname','2000-01-01','Default.png','place','Sample Bio','2023-12-04'),(2,'tagu','tagu@gmail.com','pass','Thomas','Aguirre','2000-09-11','tagu.jpg','Claremont, CA','Hey everyone, Im Thomas!','2023-12-09'),(3,'superman','super@man.com','superpass','Clark','Kent','1939-02-28','superman.jpg','Metropolis','Sample Bio','2023-12-11'),(4,'batman','bat@man.com','imbatman','Bruce','Wayne','1917-04-15','batman.jpg','Gotham','Sample Bio','2023-12-11'),(5,'flash','flash@toofast.com','toofast','Barry','Allen','1992-09-30','flash.webp','Central City','Sample Bio','2023-12-11');
 /*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -124,4 +124,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-10 11:48:55
+-- Dump completed on 2023-12-11 18:19:01
