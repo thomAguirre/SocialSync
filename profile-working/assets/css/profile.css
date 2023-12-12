@@ -9,7 +9,7 @@
     --profileDetailsBorderColor:#fff;
 }
 .profile-page-wrapper {
-    background-image: linear-gradient(to left, #1686a1 , #00c9f9);
+    background-image: linear-gradient(90deg,#6a97f1, #ff6060);
     background-color: var(--tagColor);
     color: #fff;
     min-height: 100vh;
@@ -19,6 +19,7 @@
     max-width: 920px;
     width: calc(100% - 40px);
     margin: 0 auto;
+    
 }
 .profile-row {
     display: flex;
@@ -36,6 +37,10 @@
     margin: 0px 0px 30px 0px;
     text-transform: uppercase;
     text-align: center;
+background-color: rgb(159, 228, 159);
+    border: 2px solid rgb(52, 48, 48);
+    border-radius: 8px;
+    
 }
 .profile-column-row {
     display: flex;
@@ -46,8 +51,8 @@
     width: calc(50% - 40px);
 }
 .profile-tag-wrapper {
-    background-color: whitesmoke;
-    color: #333;
+    background-color: #6a97f1;
+    color: #ede6e6;
     text-transform: uppercase;
     font-weight: 500;
     text-align: center;
@@ -77,7 +82,7 @@
     background-color: var(--rangeSliderBgColor);
     position: relative;
     border-radius: 20px;
-    border: 1px solid whitesmoke;
+    border: 1px solid rgb(241, 236, 236);
 }
 .range-slider-container .range-slider {
     position: absolute;
@@ -120,7 +125,7 @@
     width: 1px;
     height: 100%;
     position: absolute;
-    background-color: #474545;
+    background-color: #227e70;
     left: calc(50% - 0.5px);
     transform-origin: center;
     transform: rotate(-30deg);
