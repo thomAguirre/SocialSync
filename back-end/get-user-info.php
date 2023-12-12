@@ -31,6 +31,7 @@ if ($result->num_rows > 0) {
     $Bio = $row['Bio'];
     $Fname = $row['FirstName'];
     $Lname = $row['LastName'];
+    $DOB = $row['DOB'];
   }
 }
 else {

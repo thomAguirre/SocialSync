@@ -10,6 +10,8 @@
         <link href="./profile.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <!-- Session -->
+        <?php session_start(); ?>
         <!-- Get user info -->
         <?php include($_SERVER['DOCUMENT_ROOT'].'/back-end/get-user-info.php'); ?>
 
@@ -91,14 +93,23 @@
                                         </div>
                                         <!-- profile photo container end -->
                                         <!-- Logout Button -->
-                                        <form style="text-align: center" action="./back-end/logout.php">
-                                            <input type="submit" value="Logout" />
-                                        </form>
-
+                                        <?php
+                                            if($uid == $_SESSION['userID']) {
+                                                echo '<form style="text-align: center" action="./back-end/logout.php">';
+                                                echo '<input type="submit" value="Logout" />';
+                                                echo '</form>';
+                                            }
+                                        ?>
                                         <div class="profile-details-container">
                                             <ul>
                                                 <?php echo '<li>'.$Fname.' '.$Lname.'</li>'; ?>
-                                                <li>age: <span>25</span></li>
+                                                <!-- Compute age -->
+                                                <?php
+                                                    $from = new DateTime($DOB);
+                                                    $to   = new DateTime('today');
+                                                    //print age
+                                                    echo '<li>age: <span>'.$from->diff($to)->y.'</span></li>';                                                    
+                                                ?>
                                                 <?php echo '<li>Location: <span class="caps">'.$Location.'</span></li>'; ?>
                                             </ul>
                                         </div>
