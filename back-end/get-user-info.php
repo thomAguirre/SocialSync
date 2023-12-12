@@ -5,24 +5,32 @@ session_start();
 // Include the database connection file
 include($_SERVER['DOCUMENT_ROOT'].'/back-end/db.php');
 
-// Select the logged in user's info 
+//Check desired user
+if(isset($_GET['user'])){
+  $uid = $_GET['user'];
+}
+else {
+  $uid = $_SESSION['userID'];
+}
+
+// Select the user's info 
 $selectQuery = "SELECT Username, Email, FirstName, LastName, DOB, PFP, Location, Bio
                 FROM socialsync.User
-                WHERE UserID = {$_SESSION['userID']}";
+                WHERE UserID = $uid";
 
 $result = $conn->query($selectQuery);
 
 // Ensure query succeeded
 if ($result->num_rows > 0) {
-  //Display User info
+  //get User info
   while ($row = $result->fetch_assoc()) {
-    echo '<div class="user-info">';
-      echo '<img src="./assets/user/' . $row['PFP'] . '" alt="Profile Picture" class="profile-image large">';
-      echo "<h2>" . $row['Username'] . "</h2>";
-      echo "<p>" . $row['Email'] . "</p>";
-      echo "<p>" . $row['Location'] . "</p>";
-      echo "<p>" . $row['Bio'] . "</p>";
-    echo "</div>";
+    $pfp = $row['PFP'];
+    $Username = $row['Username'];
+    $Email = $row['Email'];
+    $Location = $row['Location'];
+    $Bio = $row['Bio'];
+    $Fname = $row['FirstName'];
+    $Lname = $row['LastName'];
   }
 }
 else {

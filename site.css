@@ -18,7 +18,7 @@ body {
     height: 10%;
 }
 
-.logo {
+.logo-nav {
     height: 100%;
 }
 
@@ -31,7 +31,7 @@ body {
     align-items: center;
 }
 
-.logo img {
+.logo-nav img {
     display: block; /* Ensure images inside anchor elements also behave like block-level elements */
 }
 
@@ -116,14 +116,6 @@ body {
     margin-left: auto; /* Push the profile icon to the far right */
 }
 
-.profile-container {
-    margin: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .profile-image {
     overflow: hidden;
     border-radius: 50%;
@@ -144,6 +136,11 @@ body {
 .profile-image.large {
     width: 100px;
     height: 100px;
+}
+
+.profile-image.x_large {
+    width: 200px;
+    height: 200px;
 }
 
 .user-info {

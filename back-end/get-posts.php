@@ -7,7 +7,8 @@ if(isset($calluser)) {
     $selectQuery = "SELECT
                         P.Content, 
                         P.PostDate, 
-                        P.Likes, 
+                        P.Likes,
+                        U.UserID, 
                         U.FirstName, 
                         U.LastName, 
                         U.PFP
@@ -24,7 +25,8 @@ else {
     $selectQuery = "SELECT
                         P.Content, 
                         P.PostDate, 
-                        P.Likes, 
+                        P.Likes,
+                        U.UserID, 
                         U.FirstName, 
                         U.LastName,
                         U.PFP 
@@ -49,10 +51,14 @@ if ($result->num_rows > 0) {
 
         //post heading
         echo '<div class="post-heading">';
+        //Add link to profile
+        echo '<a style="text-decoration:none;color:inherit" href="profile.php?user='.$row['UserID'].'">';
         //profile picture
         echo '<img src="./assets/user/' . $row['PFP'] . '" alt="Profile Picture" class="profile-image small">';
         //user's name
         echo "<p>" . $row['FirstName'] . " " . $row['LastName'];
+        //end link
+        echo '</a>';
         //datetime
         echo '<div class="post-date">';
         echo "<p>" . $row['PostDate'] . "</p>";

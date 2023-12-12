@@ -20,9 +20,9 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <div class="navbar">
-    <a href="site.php" class="logo">
-        <img src="./assets/SocialSync-Icon.png" class="logo">
-        <img src="./assets/SocialSync-Text.png" class="logo">
+    <a href="site.php" class="logo-nav">
+        <img src="./assets/SocialSync-Icon.png" class="logo-nav">
+        <img src="./assets/SocialSync-Text.png" class="logo-nav">
     </a>
     <a href="profile.php" class="nav-profile">
         <?php
