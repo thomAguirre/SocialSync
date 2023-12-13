@@ -101,6 +101,14 @@ CREATE TABLE `User` (
   `Location` varchar(255) DEFAULT NULL,
   `Bio` text,
   `Registered` date DEFAULT NULL,
+  `Skill1` varchar(20) DEFAULT NULL,
+  `Skill2` varchar(20) DEFAULT NULL,
+  `Skill3` varchar(20) DEFAULT NULL,
+  `Trait1` varchar(20) DEFAULT NULL,
+  `Trait2` varchar(20) DEFAULT NULL,
+  `Trait3` varchar(20) DEFAULT NULL,
+  `Goal1` varchar(255) DEFAULT NULL,
+  `Goal2` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -111,7 +119,7 @@ CREATE TABLE `User` (
 
 LOCK TABLES `User` WRITE;
 /*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES (1,'user','test@test.com','pass','fname','lname','2000-01-01','Default.png','place','Sample Bio','2023-12-04'),(2,'tagu','tagu@gmail.com','pass','Thomas','Aguirre','2000-09-11','tagu.jpg','Claremont, CA','Hey everyone, Im Thomas!','2023-12-09'),(3,'superman','super@man.com','superpass','Clark','Kent','1939-02-28','superman.jpg','Metropolis','Sample Bio','2023-12-11'),(4,'batman','bat@man.com','imbatman','Bruce','Wayne','1917-04-15','batman.jpg','Gotham','Sample Bio','2023-12-11'),(5,'flash','flash@toofast.com','toofast','Barry','Allen','1992-09-30','flash.webp','Central City','Sample Bio','2023-12-11');
+INSERT INTO `User` VALUES (1,'user','test@test.com','pass','fname','lname','2000-01-01','Default.png','place','Sample Bio','2023-12-04',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,'tagu','tagu@gmail.com','pass','Thomas','Aguirre','2000-09-11','tagu.jpg','Claremont, CA','Hey everyone, Im Thomas!','2023-12-09','Programming','Saxophone','Escape Artist','Kind','Helpful','Dog Lover','To protect the world from devestation','To unite all peoples within our nation'),(3,'superman','super@man.com','superpass','Clark','Kent','1939-02-28','superman.jpg','Metropolis','Sample Bio','2023-12-11','Strong','Heat Vision','Flight','Kind','Bashful','Stoic','To do whats right','To punch Nazis'),(4,'batman','bat@man.com','imbatman','Bruce','Wayne','1917-04-15','batman.jpg','Gotham','Sample Bio','2023-12-11','Rich','Lots of Money','Rich again','Not Batman','Still Not Batman','Nope','To free Gotham from corruption','Adopt strays'),(5,'flash','flash@toofast.com','toofast','Barry','Allen','1992-09-30','flash.webp','Central City','Sample Bio','2023-12-11','Fast','Intelligent','Observant','Kind','Brave','Helpful','To free my dad from prison','Gotta go fast');
 /*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -124,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-11 18:19:01
+-- Dump completed on 2023-12-12 16:08:54
