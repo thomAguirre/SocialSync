@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PROFILE</title>
+        <title>SocialSync | Profile</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
