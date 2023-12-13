@@ -31,6 +31,7 @@ if (!isset($_SESSION['username'])) {
     </a>
 </div>
 
+<!-- Create Posts Form -->
 <div class="post-container">
     <div class="post">
         <form action="/back-end/create-post.php" method="post" class="post-form">
