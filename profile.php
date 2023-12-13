@@ -27,19 +27,19 @@
 
                                             <div class="profile-tag-wrapper">personality</div>
                                             <div class="skill-range-slider">
-                                                    <div class="range-slider-lebel">communication</div>
+                                                    <?php echo '<div class="range-slider-lebel">'.$Trait1.'</div>'; ?>
                                                     <div class="range-slider-container">
                                                         <div class="range-slider" value="80"></div>
                                                     </div>
                                             </div>
                                             <div class="skill-range-slider">
-                                                <div class="range-slider-lebel">Team Management</div>
+                                                <?php echo '<div class="range-slider-lebel">'.$Trait2.'</div>'; ?>
                                                 <div class="range-slider-container">
                                                     <div class="range-slider" value="70"></div>
                                                 </div>
                                             </div>
                                             <div class="skill-range-slider">
-                                                <div class="range-slider-lebel">work with a team</div>
+                                                <?php echo '<div class="range-slider-lebel">'.$Trait3.'</div>'; ?>
                                                 <div class="range-slider-container">
                                                     <div class="range-slider" value="85"></div>
                                                 </div>
@@ -49,34 +49,28 @@
                                     </div>
                                     <!-- profile first column end -->
                                     <div class="profile-column column-2">
-                                        <div class="profile-tag-wrapper">skill</div>
+                                        <div class="profile-tag-wrapper">skills</div>
                                         <div class="profile-skill-container">
                                                 <div class="p-skill-wrapper">
-                                                     <div class="skill-lable">public speaking</div>
+                                                     <?php echo '<div class="skill-lable">'.$Skill1.'</div>'; ?>
                                                      <div class="skill-rating" value="3"></div>
                                                 </div>
                                                 <div class="p-skill-wrapper">
-                                                    <div class="skill-lable">copywriting</div>
+                                                    <?php echo '<div class="skill-lable">'.$Skill2.'</div>'; ?>
                                                     <div class="skill-rating" value="4"></div>
                                                </div>
                                                <div class="p-skill-wrapper">
-                                                    <div class="skill-lable">editing</div>
+                                                    <?php echo '<div class="skill-lable">'.$Skill3.'</div>'; ?>
                                                     <div class="skill-rating" value="4"></div>
                                                </div>
-                                               <div class="p-skill-wrapper">
-                                                    <div class="skill-lable">laouting</div>
-                                                    <div class="skill-rating" value="4"></div>
-                                                </div>
-
-
                                         </div>
                                         <!-- profile skill container end -->
                                         
                                         <div class="profile-tag-wrapper">goals</div>
                                         <div class="profile-goal-container">
                                                 <ul>
-                                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                                    <?php echo '<li>'.$Goal1.'</li>'; ?>
+                                                    <?php echo '<li>'.$Goal2.'</li>'; ?>
                                                 </ul>
                                         </div>
                                         <!-- profile goal container end -->
